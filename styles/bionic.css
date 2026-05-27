@@ -1,0 +1,7 @@
+span[data-readshift] b {
+  font-weight: 700;
+  color: inherit;
+}
+span[data-readshift] {
+  font-weight: 400;
+}
