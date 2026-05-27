@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap');
+
+.readshift-lexend,
+.readshift-lexend p,
+.readshift-lexend li,
+.readshift-lexend td,
+.readshift-lexend div,
+.readshift-lexend span:not([data-readshift]),
+.readshift-lexend article,
+.readshift-lexend blockquote {
+  font-family: 'Lexend', sans-serif !important;
+}
