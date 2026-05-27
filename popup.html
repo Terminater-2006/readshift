@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadShift</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">ReadShift</div>
+            <label class="switch">
+                <input type="checkbox" id="master-toggle">
+                <span class="slider round"></span>
+            </label>
+        </header>
+
+        <!-- Mode Selector -->
+        <section class="mode-selector">
+            <button class="pill" data-mode="lexend">Lexend</button>
+            <button class="pill" data-mode="bionic">Bionic</button>
+            <button class="pill active" data-mode="both">Both</button>
+        </section>
+
+        <!-- Presets -->
+        <section class="presets">
+            <label for="preset-select">Preset</label>
+            <select id="preset-select">
+                <option value="default">Default</option>
+                <option value="adhd">ADHD Mode</option>
+                <option value="dyslexia">Dyslexia Mode</option>
+                <option value="speed">Speed Read</option>
+                <option value="custom" hidden>Custom</option>
+            </select>
+        </section>
+
+        <!-- Sliders Panel -->
+        <section class="sliders-panel">
+            <div class="slider-group" id="group-fontSize">
+                <div class="slider-header">
+                    <label>Font Size</label>
+                    <span id="val-fontSize">16px</span>
+                </div>
+                <input type="range" id="fontSize" min="14" max="22" step="1" value="16">
+            </div>
+            
+            <div class="slider-group" id="group-lineSpacing">
+                <div class="slider-header">
+                    <label>Line Spacing</label>
+                    <span id="val-lineSpacing">1.6</span>
+                </div>
+                <input type="range" id="lineSpacing" min="1.2" max="2.0" step="0.1" value="1.6">
+            </div>
+            
+            <div class="slider-group" id="group-letterSpacing">
+                <div class="slider-header">
+                    <label>Letter Spacing</label>
+                    <span id="val-letterSpacing">0.02em</span>
+                </div>
+                <input type="range" id="letterSpacing" min="0" max="0.08" step="0.01" value="0.02">
+            </div>
+
+            <div class="slider-group" id="group-fixationLevel">
+                <div class="slider-header">
+                    <label>Fixation Level</label>
+                    <span id="val-fixationLevel">3</span>
+                </div>
+                <input type="range" id="fixationLevel" min="1" max="5" step="1" value="3">
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat">
+                <span class="stat-label">Words</span>
+                <span class="stat-value" id="stat-words">-</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Est. Time</span>
+                <span class="stat-value" id="stat-time">- min</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <button id="btn-reset" class="btn-text">Reset to Default</button>
+            <div class="pro-features">
+                <button class="btn-pro" id="btn-pdf">PDF Support <span class="lock">🔒</span></button>
+                <button class="btn-pro" id="btn-save">Save Custom <span class="lock">🔒</span></button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Pro Modal Stub -->
+    <div id="pro-modal" class="modal">
+        <div class="modal-content">
+            <h3>Upgrade to ReadShift Pro</h3>
+            <p>This feature is coming soon to Pro users!</p>
+            <button id="close-modal" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
