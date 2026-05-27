@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ReadShift",
+  "version": "1.0.0",
+  "description": "Applies Lexend font and Bionic Reading formatting to any webpage.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ReadShift"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
